@@ -1,12 +1,11 @@
 # Tool Memory & Color Memory GIMP Plugins
-
 Choose your language:
-
-**🇬🇧 [English](#english)** | **🇵🇱 [Polski](#polski)**
+* [English](#english)
+* [Polski](#polski)
 
 ---
 
-## English 🇬🇧 {#english}
+## English 🇬🇧
 
 ## Description
 
@@ -56,7 +55,7 @@ Zygzaq
 ***
 
 
-## Polski 🇵🇱 {#polski}
+## Polski 🇵🇱
 
 ## Opis
 
