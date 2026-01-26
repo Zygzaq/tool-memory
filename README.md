@@ -35,19 +35,33 @@ ps. Personally, when painting/drawing, I change tools every few seconds/minutes,
 ### GIMP 2.10
 
 1. Copy files from the `v2.10/` folder to:
+
     - **Windows:** `%AppData%\GIMP\2.10\plug-ins\`
+      ...if you don't know where the directory is on your hard drive, check the GIMP settings (Edit/Preferences|Folders/Plugins)
     - **Linux:** `~/.config/GIMP/2.10\plug-ins/`
     - **macOS:** `~/.config/GIMP/2.10/plug-ins/`
-2. Grant execution permissions to script files: `chmod +x tool_memory.py color_memory.py`
+
+2. Grant execution permissions to script files (Linux/macOS only): 
+
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/tool_memory.py`
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/color_memory.py`
+
 3. Restart GIMP
 
 ### GIMP 3.0
 
 1. Copy folders from `v3.0/` to:
+
     - **Windows:** `%AppData%\GIMP\3.0\plug-ins\`
+      ...if you don't know where the directory is on your hard drive, check the GIMP settings (Edit/Preferences|Folders/Plugins)
     - **Linux:** `~/.config/GIMP/3.0/plug-ins/`
     - **macOS:** `~/.config/GIMP/3.0/plug-ins/`
-2. Grant execution permissions to script files: `chmod +x tool-memory/tool-memory.py color-memory/color-memory.py`
+
+2. Grant execution permissions to script files (Linux/macOS only): 
+
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/tool-memory/tool-memory.py`
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/color-memory/color-memory.py`
+
 3. Restart GIMP
 
 ## License
@@ -74,7 +88,7 @@ Po aktywacji skrypty zmieniają funkcjonalność narzędzi rysujących.
 
 - Pamięć narzędzia - Zapamiętuje parametry końcówki każdego narzędzia oddzielnie (rozmiar, kształt i zachowanie).
 - Pamięć koloru - Zapamiętuje kolor każdego narzędzia oddzielnie.
-- Po uruchomieniu skrypt działa w tle do czasu zamknięcia programu. 
+- Po uruchomieniu skrypt działa w tle do czasu zamknięcia programu.
 
 ## Motywacja - Dlaczego tak?
 
@@ -93,10 +107,14 @@ ps. Osobiście podczas malowania/rysowania zmieniam narzędzia co kilka sekund/m
 1. Skopiuj pliki z folderu `v2.10/` do folderu:
 
     - **Windows:** `%AppData%\GIMP\2.10\plug-ins\`
+      ...jeśli nie wiesz gdzie znajduje się katalog na Twoim dysku, sprawdź w ustawieniach GIMP'a (Edycja/Preferencje|Katalogi/Wtyczki)
     - **Linux:** `~/.config/GIMP/2.10/plug-ins/`
     - **macOS:** `~/.config/GIMP/2.10/plug-ins/`
 
-2. Nadaj plikom skryptów uprawnienia wykonywania: `chmod +x tool_memory.py color_memory.py`
+2. Nadaj plikom skryptów uprawnienia wykonywania (Linux/macOS):
+
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/tool_memory.py`
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/color_memory.py`
 
 3. Zrestartuj program GIMP
 
@@ -106,12 +124,16 @@ ps. Osobiście podczas malowania/rysowania zmieniam narzędzia co kilka sekund/m
 1. Skopiuj foldery z `v3.0/` do folderu:
 
     - **Windows:** `%AppData%\GIMP\3.0\plug-ins\`
+      ...jeśli nie wiesz gdzie znajduje się katalog na Twoim dysku, sprawdź w ustawieniach GIMP'a (Edycja/Preferencje|Katalogi/Wtyczki)
     - **Linux:** `~/.config/GIMP/3.0/plug-ins/`
     - **macOS:** `~/.config/GIMP/3.0/plug-ins/`
 
-2. Nadaj plikom skryptów uprawnienia wykonywania: `chmod +x tool-memory/tool-memory.py color-memory/color-memory.py`
+2. Nadaj plikom skryptów uprawnienia wykonywania (Linux/macOS):
 
-Zrestartuj program GIMP
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/tool-memory/tool-memory.py`
+    - `chmod +x ~/.config/GIMP/3.0/plug-ins/color-memory/color-memory.py`
+
+3. Zrestartuj program GIMP
 
 
 ## Licencja
