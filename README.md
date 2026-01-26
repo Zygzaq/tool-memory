@@ -1,7 +1,7 @@
 # Tool Memory & Color Memory GIMP Plugins
 Choose your language:
 * [English](#english)
-* [Polski](#-polski)
+* [Polski](#polski)
 
 ---
 
