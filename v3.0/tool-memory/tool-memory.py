@@ -88,3 +88,4 @@ class ToolMemoryPlugin(Gimp.PlugIn):
         return procedure.new_return_values(Gimp.PDBStatusType.SUCCESS, None)
 
 Gimp.main(ToolMemoryPlugin.__gtype__, sys.argv)
+

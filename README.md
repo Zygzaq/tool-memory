@@ -12,6 +12,13 @@ Choose your language:
 
 The scripts add two additional items to the Tools menu - "Tool Memory" and "Color Memory".
 Once activated, the scripts change the functionality of drawing tools.
+During expressive creative work, only the prepared tools are changed, not their characteristics/properties.
+When manipulating a tool, one utilizes its individual characteristics to achieve a specific result, gaining skill in manipulating that characteristic, which often translates into a specific final effect dependent on the tool's constant characteristics.
+
+Thanks to the individual settings of each tool's tip, as well as the ability to assign a separate color to each tool, one can use hand painting tools similarly to how one alternates between different types of brushes with different colors when creating a painting on canvas, or similarly to how an artist uses different types of pencils during professional drawing.
+With this approach, each tool MUST have its own individual parameters, set by the artist, which should not be transferred to another tool when quickly changing them during painting.
+
+ps. Personally, when painting/drawing, I change tools every few seconds/minutes, depending on the detail/fragment of the work being done.
 
 ## Features
 
@@ -77,6 +84,7 @@ W trakcie ekspresyjnej pracy twórczej zmienia się jedynie przygotowane narzęd
 Podczas operowania narzędziem wykorzystuje się jego indywidualną cechę do osiągnięcia określonego rezultatu, nabierając wprawy w operowaniu cechą, co przekłada się często na specyficzny, zależny od stałej cechy narzędzia efekt końcowy.
 Dzięki indywidualnym ustawieniom końcówki każdego narzędzia oddzielnie, a także możliwości przydzielenia każdemu narzędziu osobnego koloru, można używać narzędzi do malowania ręcznego podobnie, jak używa się różnych rodzajów pędzli z różnymi kolorami na zmianę w trakcie tworzenia obrazu na płótnie, lub też podobnie, jak artysta operuje różnego rodzaju ołówkami podczas profesjonalnego rysownia. 
 Przy takim podejściu każde narzędzie MUSI mieć swoje indywidualne, ustawione przez artystę parametry, które nie powinny być przenoszone na inne narzędzie podczas ich szybkiej zmiany w trakcie malowania. 
+
 ps. Osobiście podczas malowania/rysowania zmieniam narzędzia co kilka sekund/minut w zależości od aktualnie realizowanego detalu/fragmentu rękodzieła.
 
 ## Instalacja
