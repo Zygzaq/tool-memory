@@ -1,9 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # Copyright (C) 2026  Sebastian Żmijewski (Zygzaq)
 # This program is free software: you can redistribute it and/or modify it under 
 # the terms of the GNU General Public License as published by the Free Software Foundation...
 
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 from gimpfu import *
 import gtk
