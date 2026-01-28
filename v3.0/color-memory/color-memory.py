@@ -14,24 +14,24 @@ import locale
 
 lang, _ = locale.getlocale()
 
+color_memory_timer = 160
+
 if lang and lang.startswith("pl"):
     s_menu = "Pamięć koloru"
     s_opis = "Zapamiętuje i przywraca kolor pierwszoplanowy dla każdego narzędzia oddzielnie"
-    s_opis2 = "Zapamiętuje i przywraca kolor pierwszoplanowy dla każdego narzędzia oddzielnie"
-    s_msg_on = ">>> Pamięć koloru: AKTYWNA (do zamknięcia GIMPa)"    
     s_msg_ex = "Pamięć koloru: AKTYWNA (do zamknięcia GIMPa)"
+    s_msg_on = ">>> "+s_msg_ex
 else:
     s_menu = "Color Memory"
     s_opis = "Memorizing the foreground color of each tool separately"
-    s_opis2 = "Memorizing the foreground color of each tool separately"
-    s_msg_on = ">>> Color Memory: ACTIVE (until GIMP is closed)"
     s_msg_ex = "Color Memory: ACTIVE (until GIMP is closed)"
+    s_msg_on = ">>> "+s_msg_ex
 
 class ColorMemory:
     def __init__(self):
         self.color_memory = {}
         self.last_tool = None
-        GLib.timeout_add(150, self.check_tool)
+        GLib.timeout_add(color_memory_timer, self.check_tool)
 
     def check_tool(self):
         try:
@@ -78,4 +78,3 @@ class ColorMemoryPlugin(Gimp.PlugIn):
         return procedure.new_return_values(Gimp.PDBStatusType.SUCCESS, None)
 
 Gimp.main(ColorMemoryPlugin.__gtype__, sys.argv)
-

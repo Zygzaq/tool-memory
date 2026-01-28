@@ -5,7 +5,6 @@
 # This program is free software: you can redistribute it and/or modify it under 
 # the terms of the GNU General Public License as published by the Free Software Foundation...
 
-
 from gimpfu import *
 import gtk
 import gobject
@@ -14,24 +13,24 @@ import locale
 
 lang, _ = locale.getdefaultlocale()
 
+color_memory_timer = 160
+
 if lang and lang.startswith("pl"):
     s_menu = "Pamięć koloru"
-    s_opis = "Zapamiętuje i przywraca kolor pierwszoplanowy każdego narzędzia oddzielnie"
-    s_opis2 = "Zapamiętuje i przywraca kolor pierwszoplanowy każdego narzędzia oddzielnie"
-    s_msg_on = ">>> Pamięć koloru: AKTYWNA (do zamknięcia GIMPa)"    
+    s_opis = "Zapamiętuje i przywraca kolor pierwszoplanowy dla każdego narzędzia oddzielnie"
     s_msg_ex = "Pamięć koloru: AKTYWNA (do zamknięcia GIMPa)"
+    s_msg_on = ">>> " + s_msg_ex
 else:
     s_menu = "Color Memory"
     s_opis = "Memorizing the foreground color of each tool separately"
-    s_opis2 = "Memorizing the foreground color of each tool separately"
-    s_msg_on = ">>> Color Memory: ACTIVE (until GIMP is closed)"
     s_msg_ex = "Color Memory: ACTIVE (until GIMP is closed)"
+    s_msg_on = ">>> " + s_msg_ex
 
 class ColorMemory:
     def __init__(self):
         self.color_memory = {}
         self.last_tool = None
-        gobject.timeout_add(150, self.check_tool)
+        gobject.timeout_add(color_memory_timer, self.check_tool)
 
     def check_tool(self):        
         try:
@@ -59,7 +58,7 @@ def run_zzq_color():
 register(
     "python_fu_color_memory_persistent",
     s_opis,
-    s_opis2,
+    s_opis,
     "Zygzaq", "© 2026 Sebastian Żmijewski", "2026",
     s_menu,
     "*", # "" - global
@@ -71,4 +70,3 @@ register(
 
 if __name__ == "__main__":
     main()
-

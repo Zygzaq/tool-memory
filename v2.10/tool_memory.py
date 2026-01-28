@@ -12,24 +12,24 @@ import locale
 
 lang, _ = locale.getdefaultlocale()
 
+tool_memory_timer = 160
+
 if lang and lang.startswith("pl"):
     s_menu = "Pamięć narzędzia"
-    s_opis = "Zapamiętuje i przywraca parametry końcówki każdego narzędzia oddzielnie (rozmiar, kształt i zachowanie)"
-    s_opis2 = "Zapamiętuje i przywraca parametry końcówki każdego narzędzia oddzielnie (rozmiar, kształt i zachowanie)"
-    s_msg_on = ">>> Pamięć narzędzia: AKTYWNA (do zamknięcia GIMPa)"
+    s_opis = "Zapamiętuje parametry końcówki każdego narzędzia oddzielnie (rozmiar, kształt i zachowanie)"
     s_msg_ex = "Pamięć narzędzia: AKTYWNA (do zamknięcia GIMPa)"
+    s_msg_on = ">>> "+s_msg_ex
 else:
     s_menu = "Tool Memory"
     s_opis = "Memorizing the tip parameters of each tool separately (size, shape, and behavior)"
-    s_opis2 = "Memorizing the tip parameters of each tool separately (size, shape, and behavior)"
-    s_msg_on = ">>> Tool Memory: ACTIVE (until GIMP is closed)"
     s_msg_ex = "Tool Memory: ACTIVE (until GIMP is closed)"
+    s_msg_on = ">>> "+s_msg_ex
 
 class ToolMemory:
     def __init__(self):
         self.tool_memory = {}
         self.last_tool = None
-        gobject.timeout_add(150, self.check_tool)
+        gobject.timeout_add(tool_memory_timer, self.check_tool)
 
     def check_tool(self):        
         try:
@@ -72,7 +72,7 @@ def run_zzq_tool():
 register(
     "python_fu_tool_memory_persistent",
     s_opis,
-    s_opis2,
+    s_opis,
     "Zygzaq", "© 2026 Sebastian Żmijewski", "2026",
     s_menu,
     "*", 
@@ -84,4 +84,3 @@ register(
 
 if __name__ == "__main__":
     main()
-
